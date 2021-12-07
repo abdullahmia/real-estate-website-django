@@ -1,0 +1,11 @@
+#header {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: blue;
+    color: #ffc;
+    overflow: hidden;
+}
