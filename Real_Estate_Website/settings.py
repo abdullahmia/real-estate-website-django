@@ -1,9 +1,6 @@
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
-import django_heroku
-import dj_database_url
-from decouple import config
 # for ck-edito
 from ckeditor.configs import DEFAULT_CONFIG
 
@@ -60,7 +57,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Real_Estate_Website.urls'
@@ -147,7 +143,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-STATICFILES_STORAGE = 'whitenoise.storge.CompressedManifestStaticFilesStorage'
 
 # Media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -169,7 +164,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = '' # your email
 EMAIL_HOST_PASSWORD = '' # your password
 EMAIL_USE_SSL = False
-
 
 
 # For CK -Editor
@@ -216,5 +210,3 @@ CKEDITOR_CONFIGS = {
         "codeSnippet_theme": "xcode",
     },
 }
-
-django_heroku.settings(locals())
